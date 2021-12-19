@@ -1,7 +1,37 @@
 import React from 'react';
 
+import BackBtn from '../../components/BackBtn';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux'
+
+import reducer from './reducer';
+import Btns from './components/Btns';
+import Output from './components/Output';
+
 const Counter = () => {
-  return <div className="counter"> COUNTER </div>
+  return (
+  <Provider store={createStore(reducer)}>
+    <div className="counter">
+      <BackBtn />
+      <div className="row align-items-center">
+        <div className="col-12">
+          <h1 className='title'>
+            Counter.
+          </h1>
+          <p>
+            Use buttons to count:
+          </p>
+        </div>
+        <div className="col-3">
+          <Btns />
+        </div>
+        <div className="col-6">
+          <Output />
+        </div>
+      </div>
+    </div>
+  </Provider>
+  )
 };
 
 export default Counter;
