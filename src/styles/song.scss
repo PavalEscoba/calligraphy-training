@@ -1,0 +1,14 @@
+.song {
+  &__details-header {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-family: 'Open Sans', serif;
+    font-weight: 500;
+  }
+
+  .list-group-item {
+    cursor: pointer;
+  }
+}

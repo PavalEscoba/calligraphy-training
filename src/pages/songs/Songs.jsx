@@ -10,7 +10,7 @@ import SongDetails from './components/SongDetails.jsx';
 const Songs = () => {
   return (
     <Provider store={createStore(reducers)}>
-      <div className="songs">
+      <div className="song">
         <BackBtn />
         <div className="container">
           <div className="row">

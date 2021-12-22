@@ -2,10 +2,10 @@ import {combineReducers} from 'redux';
 
 const songsListReducer = () => {
   return [
-    {title: "Majo Pakalenne", author: "NRM"},
-    {title: "Sluckaja Brama", author: "Krama"},
-    {title: "Pakul spiavaju", author: "Ulis"},
-    {title: "Na Kaliady", author: "Aliaksandr Pamidorau"}
+    {title: "Majo Pakalenne", author: "NRM", duration: "4:09"},
+    {title: "Sluckaja Brama", author: "Krama", duration: "3:28"},
+    {title: "Pakul spiavaju", author: "Ulis", duration: "4:43"},
+    {title: "Na Kaliady", author: "Aliaksandr Pamidorau", duration: "4:49"}
   ];
 };
 
@@ -21,6 +21,6 @@ const selectedSongReducer = (selectedSong = null, action) => {
 export default combineReducers(
   {
     songsList: songsListReducer,
-    song: selectedSongReducer
+    selectedSong: selectedSongReducer
   }
 );

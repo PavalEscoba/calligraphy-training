@@ -2,10 +2,13 @@ import {connect} from 'react-redux';
 import selectSong from '../actions';
 
 const SongsList = (props) => {
-  console.log(props);
   const list = props.songs.map(song => {
-    return ( <li className='list-group-item'> {song.title}</li>)
-  })
+    return ( 
+    <li className='list-group-item list-group-item-action' onClick={()=> props.selectSong(song)} key={song.title}> 
+      <span className='song__title'>{song.author}</span> - <span>{song.title}</span>
+    </li>);
+  });
+
   return(
     <ul className="list-group">
       {list}
