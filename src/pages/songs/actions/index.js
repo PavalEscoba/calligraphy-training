@@ -1,8 +1,13 @@
-const selectSong = (song) => {
+export const selectSong = (song) => {
   return {
     type: "SELECT_SONG",
-    payload: song
+    payload: song,
   };
 };
 
-export default selectSong;
+export const resetDetails = () => {
+  return {
+    type: "RESET_DETAILS",
+    payload: null,
+  };
+};
