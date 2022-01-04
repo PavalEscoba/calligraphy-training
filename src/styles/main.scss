@@ -1,8 +1,7 @@
-
 *,
 *::after,
 *::before {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -10,7 +9,7 @@ body {
 }
 
 .title {
-  font-family: 'Proza Libre', sans-serif;
+  font-family: "Proza Libre", sans-serif;
   font-size: 1.5rem;
   margin: 0;
   margin-bottom: 1rem;
@@ -49,6 +48,7 @@ body {
   top: 20px;
 }
 
-@import 'counter';
-@import 'song';
-@import 'calligraphy';
+@import "season";
+@import "counter";
+@import "song";
+@import "calligraphy";

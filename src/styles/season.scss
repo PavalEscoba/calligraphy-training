@@ -1,0 +1,15 @@
+.spinner-text {
+  margin-left: 24px;
+}
+
+.season-display {
+  padding: 12px;
+
+  &.summer {
+    background-color: lightgoldenrodyellow;
+  }
+
+  &.winter {
+    background-color: lightblue;
+  }
+}
