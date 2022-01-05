@@ -1,0 +1,14 @@
+.back-btn {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+
+  &__arrow-left {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__text {
+    margin-left: 6px;
+  }
+}

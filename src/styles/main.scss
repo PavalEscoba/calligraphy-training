@@ -42,12 +42,7 @@ body {
   margin-top: 12px;
 }
 
-.back-btn {
-  position: fixed;
-  left: 20px;
-  top: 20px;
-}
-
+@import "back-btn";
 @import "season";
 @import "counter";
 @import "song";
