@@ -8,6 +8,9 @@ const Home = () => {
       <Link to="/season" className="link">
         Season
       </Link>
+      <Link to="/pics" className="link">
+        Pics
+      </Link>
       <Link to="/counter" className="link">
         Counter
       </Link>

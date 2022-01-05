@@ -1,0 +1,21 @@
+.pic {
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  &__wrapper {
+    padding: 0 15px;
+    max-width: 32%;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  &__desc {
+    font-family: "Proza Libre", sans-serif;
+  }
+}

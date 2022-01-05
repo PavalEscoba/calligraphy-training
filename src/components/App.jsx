@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "../pages/home/Home";
 import Season from "../pages/season/Season";
+import Pics from "../pages/pics/Pics";
 import Counter from "../pages/counter/Counter";
 import Songs from "../pages/songs/Songs";
 import Calligraphy from "../pages/calligraphy/Calligraphy";
@@ -19,6 +20,7 @@ const App = () => {
               <Routes>
                 <Route path="/" exact element={<Home />} />
                 <Route path="/season" element={<Season />} />
+                <Route path="/pics" element={<Pics />} />
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/songs" element={<Songs />} />
                 <Route path="/calligraphy" element={<Calligraphy />} />
