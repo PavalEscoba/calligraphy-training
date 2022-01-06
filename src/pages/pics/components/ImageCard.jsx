@@ -1,19 +1,25 @@
 import React from "react";
 
 class ImageCard extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      spans: 0
+    };
+
     this.imageRef = React.createRef();
+    this.imageCaptionRef = React.createRef();
   }
 
   componentDidMount() {
-    this.imageRef.current.addEventListener("load", () => {
-      console.log(this.imageRef.current.clientHeight);
-    });
+    this.imageRef.current.addEventListener("load", this.setSpans)
   }
 
   setSpans = () => {
-    console.log(this.imageRef.current.clientHeight);
+    const totalHeight = this.imageCaptionRef.current.clientHeight + this.imageRef.current.clientHeight;
+    console.log(totalHeight);
+    const spans = Math.ceil(totalHeight / 30) + 1;
+    this.setState({spans});
   };
 
   render() {
@@ -21,15 +27,20 @@ class ImageCard extends React.Component {
     const { name, instagram_username, updated_at } = this.props.image.user;
 
     const figureRender = () => {
+      console.log(this.props.image);
       return (
-        <figure ref={this.imageRef} key={id} className="pic__wrapper">
+        <figure 
+          style={{gridRowEnd: `span ${this.state.spans}`}} 
+          key={id} 
+          className="pic__wrapper">
           <img
-            src={urls.small}
+            ref={this.imageRef}
+            src={urls.full}
             title={alt_description}
             alt={alt_description}
             className="pic__img"
           />
-          <figcaption>
+          <figcaption ref={this.imageCaptionRef}>
             {description ? <p className="pic__title">{description}</p> : null}
             <p>
               Made by:{" "}
@@ -58,7 +69,7 @@ class ImageCard extends React.Component {
         </figure>
       );
     };
-    return <div> {figureRender()} </div>;
+    return  <>{figureRender()}</>;
   }
 }
 
