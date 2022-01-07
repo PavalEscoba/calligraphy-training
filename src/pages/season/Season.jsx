@@ -1,6 +1,5 @@
 import React from "react";
 
-import BackBtn from "../../components/BackBtn";
 import Spinner from "./Spinner";
 import SeasonDisplay from "./SeasonDisplay";
 
@@ -33,12 +32,10 @@ class Season extends React.Component {
   render() {
     return (
       <div className="season">
-        <BackBtn />
-        <h1 className="title">
-          Season
-        </h1>
+        <h1 className="title">Season</h1>
         <p>
-          The application detects where you are and reports whether it is winter or summer outside.
+          The application detects where you are and reports whether it is winter
+          or summer outside.
         </p>
         <div className="row">{this.renderContent()}</div>
       </div>

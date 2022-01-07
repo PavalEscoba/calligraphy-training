@@ -4,10 +4,6 @@
   font-family: "Open Sans", sans-serif;
 }
 
-body {
-  padding-top: 70px;
-}
-
 .title {
   font-family: "Proza Libre", sans-serif;
   font-size: 1.5rem;
@@ -42,9 +38,11 @@ body {
   margin-top: 12px;
 }
 
+@import "header";
 @import "back-btn";
 @import "season";
 @import "pics";
+@import "youtube";
 @import "counter";
 @import "song";
 @import "calligraphy";

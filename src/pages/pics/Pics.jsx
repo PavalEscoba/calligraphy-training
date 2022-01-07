@@ -1,7 +1,6 @@
 import React from "react";
 
 import unsplash from "./api/unsplash";
-import BackBtn from "../../components/BackBtn";
 import SearchBar from "./components/Searchbar";
 import ImageList from "./components/ImageList";
 
@@ -19,7 +18,6 @@ class Pics extends React.Component {
   render() {
     return (
       <>
-        <BackBtn />
         <div className="row">
           <div className="col-sm-12">
             <h1 className="title">Pics</h1>

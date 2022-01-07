@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import Header from "./Header";
 import Home from "../pages/home/Home";
 import Season from "../pages/season/Season";
 import Pics from "../pages/pics/Pics";
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
+        <Header />
         <div className="container">
           <div className="row">
             <div className="col-sm-12">

@@ -3,7 +3,6 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import reducers from "./reducer";
-import BackBtn from "../../components/BackBtn";
 import SongsList from "./components/SongList.jsx";
 import SongDetails from "./components/SongDetails.jsx";
 
@@ -11,7 +10,6 @@ const Songs = () => {
   return (
     <Provider store={createStore(reducers)}>
       <div className="song">
-        <BackBtn />
         <div className="container">
           <div className="row">
             <div className="col-12">
