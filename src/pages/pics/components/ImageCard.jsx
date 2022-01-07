@@ -4,7 +4,7 @@ class ImageCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      spans: 0
+      spans: 0,
     };
 
     this.imageRef = React.createRef();
@@ -12,14 +12,16 @@ class ImageCard extends React.Component {
   }
 
   componentDidMount() {
-    this.imageRef.current.addEventListener("load", this.setSpans)
+    this.imageRef.current.addEventListener("load", this.setSpans);
   }
 
   setSpans = () => {
-    const totalHeight = this.imageCaptionRef.current.clientHeight + this.imageRef.current.clientHeight;
+    const totalHeight =
+      this.imageCaptionRef.current.clientHeight +
+      this.imageRef.current.clientHeight;
     console.log(totalHeight);
     const spans = Math.ceil(totalHeight / 30) + 1;
-    this.setState({spans});
+    this.setState({ spans });
   };
 
   render() {
@@ -29,13 +31,14 @@ class ImageCard extends React.Component {
     const figureRender = () => {
       console.log(this.props.image);
       return (
-        <figure 
-          style={{gridRowEnd: `span ${this.state.spans}`}} 
-          key={id} 
-          className="pic__wrapper">
+        <figure
+          style={{ gridRowEnd: `span ${this.state.spans}` }}
+          key={id}
+          className="pic__wrapper"
+        >
           <img
             ref={this.imageRef}
-            src={urls.full}
+            src={urls.regular}
             title={alt_description}
             alt={alt_description}
             className="pic__img"
@@ -69,7 +72,7 @@ class ImageCard extends React.Component {
         </figure>
       );
     };
-    return  <>{figureRender()}</>;
+    return <>{figureRender()}</>;
   }
 }
 

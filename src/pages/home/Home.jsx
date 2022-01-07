@@ -11,6 +11,9 @@ const Home = () => {
       <Link to="/pics" className="link">
         Pics
       </Link>
+      <Link to="/youtube-class" className="link">
+        Youtube (classes)
+      </Link>
       <Link to="/counter" className="link">
         Counter
       </Link>
