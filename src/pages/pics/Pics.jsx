@@ -21,7 +21,7 @@ class Pics extends React.Component {
         <div className="row">
           <div className="col-sm-12">
             <h1 className="title">Pics</h1>
-            <p>The application searchs for pictures of any kind.</p>
+            <p className="subtitle">The application searchs for pictures of any kind.</p>
           </div>
         </div>
         <div className="row">

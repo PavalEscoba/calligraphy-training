@@ -33,7 +33,7 @@ class Season extends React.Component {
     return (
       <div className="season">
         <h1 className="title">Season</h1>
-        <p>
+        <p className="subtitle">
           The application detects where you are and reports whether it is winter
           or summer outside.
         </p>

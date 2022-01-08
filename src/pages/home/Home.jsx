@@ -3,27 +3,47 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <>
-      <h1 className="title">List of made tasks:</h1>
-      <Link to="/season" className="link">
-        Season
-      </Link>
-      <Link to="/pics" className="link">
-        Pics
-      </Link>
-      <Link to="/youtube-class" className="link">
-        Youtube (classes)
-      </Link>
-      <Link to="/counter" className="link">
-        Counter
-      </Link>
-      <Link to="/songs" className="link">
-        Songs
-      </Link>
-      <Link to="/calligraphy" className="link">
-        Calligraphy
-      </Link>
-    </>
+    <section className="home">
+      <h1 className="title section-title">List of made tasks:</h1>
+      <div className="links-block">
+        <div className="links-block__text-wrapper  text-success">
+          <h3 className="title links-block__title">Basic knowledge (functional + class based components)</h3>
+          <p className="links-block__text">(sections 1-11)</p>
+        </div>
+        <Link to="/season" className="link text-secondary">
+          Season
+        </Link>
+        <Link to="/pics" className="link text-secondary">
+          Pics
+        </Link>
+        <Link to="/youtube-class" className="link text-secondary">
+          Youtube (classes)
+        </Link>
+      </div>
+      
+      <div className="links-block">
+        <div className="links-block__text-wrapper text-success">
+          <h3 className="title links-block__title">React + Redux </h3>
+          <p className="links-block__text">(sections 1-11)</p>
+        </div>
+        <Link to="/counter" className="link text-secondary">
+          Counter
+        </Link>
+        <Link to="/songs" className="link text-secondary">
+          Songs
+        </Link>
+      </div>
+
+      <div className="links-block">
+        <div className="links-block__text-wrapper text-success">
+          <h3 className="title links-block__title">Pet project</h3>
+          <p className="links-block__text">calligraphy training sheets generator</p>
+        </div>
+        <Link to="/calligraphy" className="link text-secondary">
+          Calligraphy
+        </Link>
+      </div>
+    </section>
   );
 };
 
