@@ -31,7 +31,7 @@ class YoutubeClass extends React.Component {
         <div className="youtube">
           <div className="row">
             <div className="col-sm-12">
-              <h1 className="title">Youtube client</h1>
+              <h1 className="section-title">Youtube client</h1>
               <p className="subtitle">
                 Here you can search for any Youtube video, watch it and read
                 additional info about it.

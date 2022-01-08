@@ -20,7 +20,7 @@ class Pics extends React.Component {
       <>
         <div className="row">
           <div className="col-sm-12">
-            <h1 className="title">Pics</h1>
+            <h1 className="section-title">Pics</h1>
             <p className="subtitle">The application searchs for pictures of any kind.</p>
           </div>
         </div>

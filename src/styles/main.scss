@@ -11,8 +11,13 @@ p, ul {
 
 .title {
   font-family: "Proza Libre", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
+}
+
+.section-title {
+  font-family: "Proza Libre", sans-serif;
+  font-size: 1.5rem;
   margin-bottom: 16px;
 }
 
@@ -29,6 +34,7 @@ p, ul {
 @import "season";
 @import "pics";
 @import "youtube";
+@import "widgets";
 @import "counter";
 @import "song";
 @import "calligraphy";

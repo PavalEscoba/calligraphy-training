@@ -13,7 +13,7 @@ const Counter = () => {
       <div className="counter">
         <div className="row align-items-center">
           <div className="col-12">
-            <h1 className="title">Counter.</h1>
+            <h1 className="section-title">Counter.</h1>
             <p className="subtitle">Use buttons to count:</p>
           </div>
           <div className="col-3">

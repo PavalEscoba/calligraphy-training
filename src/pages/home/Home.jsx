@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section className="home">
-      <h1 className="title section-title">List of made tasks:</h1>
+      <h1 className="section-title">List of made tasks:</h1>
       <div className="links-block">
-        <div className="links-block__text-wrapper  text-success">
+        <div className="links-block__text-wrapper text-success">
           <h3 className="title links-block__title">Basic knowledge (functional + class based components)</h3>
           <p className="links-block__text">(sections 1-11)</p>
         </div>
@@ -18,6 +18,16 @@ const Home = () => {
         </Link>
         <Link to="/youtube-class" className="link text-secondary">
           Youtube (classes)
+        </Link>
+      </div>
+
+      <div className="links-block">
+        <div className="links-block__text-wrapper text-success">
+          <h3 className="title links-block__title">React + Hooks (4 widgets)</h3>
+          <p className="links-block__text">(section 12)</p>
+        </div>
+        <Link to="/widgets" className="link text-secondary">
+          Widgets
         </Link>
       </div>
       

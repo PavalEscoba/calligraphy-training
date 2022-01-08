@@ -13,7 +13,7 @@ const Songs = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1 className="title">Songs</h1>
+              <h1 className="section-title">Songs</h1>
               <p>Click on a song to see details.</p>
             </div>
             <div className="col-5">{<SongsList />}</div>
