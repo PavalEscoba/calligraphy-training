@@ -19,16 +19,18 @@ class Pics extends React.Component {
     return (
       <>
         <div className="row">
-          <div className="col-sm-12">
+          <div className="col-12">
             <h1 className="section-title">Pics</h1>
-            <p className="subtitle">The application searchs for pictures of any kind.</p>
+            <p className="subtitle">
+              The application searchs for pictures of any kind.
+            </p>
           </div>
         </div>
         <div className="row">
           <div className="col-sm-6">
             <SearchBar submittingFunction={this.onFormSubmit} />
           </div>
-          <div className="col-sm-12">
+          <div className="col-12">
             <ImageList images={this.state.images} />
           </div>
         </div>

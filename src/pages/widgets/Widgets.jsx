@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import Accordion from './components/Accordion'
+import Accordion from "./components/Accordion";
+import Wiki from "./components/Wiki";
 
 const items = [
   {
@@ -33,25 +34,22 @@ const options = [
 ];
 
 const Widgets = () => {
-    return (
-      <div className="accordion">
-        <div className="row">
-          <div className="col-sm-12">
-            <h3 className="section-title">
-              Widgets
-            </h3>
-            <p className="subtitle">
-              A bunch of apps to practice hooks in React.
-            </p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-sm-6">
-            <Accordion items={items}/>
-          </div>
+  return (
+    <div className="widgets">
+      <div className="row">
+        <div className="col-12">
+          <h3 className="section-title">Widgets</h3>
+          <p className="subtitle">
+            A bunch of apps to practice hooks in React.
+          </p>
         </div>
       </div>
-    );
+      <div className="row">
+        {/* <Accordion items={items} /> */}
+        <Wiki />
+      </div>
+    </div>
+  );
 };
 
 export default Widgets;

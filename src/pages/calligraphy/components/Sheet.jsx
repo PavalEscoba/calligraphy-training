@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 const Sheet = ({ nibWidth }) => {
   return (
     <div className="row">
-      <div className="col-sm-12">
+      <div className="col-12">
         <div className="sheet">
           <p>You've chosen nib width: {nibWidth.toString()}</p>
         </div>

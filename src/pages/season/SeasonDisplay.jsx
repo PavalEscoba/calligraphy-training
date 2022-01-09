@@ -23,7 +23,7 @@ const SeasonDisplay = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
   const { text, icon } = seasonConfig[season];
   return (
-    <div className="col-sm-12">
+    <div className="col-12">
       <div className={`season-display ${season}`}>
         <p className="text-success">
           You have {season} outside. Cause your latitude is {props.lat}

@@ -14,7 +14,7 @@ const Songs = () => {
           <div className="row">
             <div className="col-12">
               <h1 className="section-title">Songs</h1>
-              <p>Click on a song to see details.</p>
+              <p className="subtitle">Click on a song to see details.</p>
             </div>
             <div className="col-5">{<SongsList />}</div>
             <div className="col-7">{<SongDetails />}</div>
