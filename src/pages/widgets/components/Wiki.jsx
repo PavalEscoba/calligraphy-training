@@ -2,44 +2,58 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Wiki = () => {
-  const [term, setTerm] = useState("");
+  const [term, setTerm] = useState("book");
+  const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    const search = async () => {
-      const { data } = await axios.get(" https://en.wikipedia.org/w/api.php", {
-        params: {
-          format: "json",
-          action: "query",
-          origin: "*",
-          list: "search",
-          srsearch: term,
-        },
-      });
-      setResults(data.query.search);
-    };
-
-    const searchTimer = setTimeout(() => {
-      if (term) {
-        search();
-      }
+    const timerId = setTimeout(() => {
+      setDebouncedTerm(term);
     }, 1000);
 
     return () => {
-      clearTimeout(searchTimer);
+      clearTimeout(timerId);
     };
   }, [term]);
+
+  useEffect(() => {
+    const search = async () => {
+      const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
+        params: {
+          action: "query",
+          list: "search",
+          origin: "*",
+          format: "json",
+          srsearch: debouncedTerm,
+        },
+      });
+
+      setResults(data.query.search);
+    };
+
+    if (debouncedTerm) {
+      search();
+    }
+  }, [debouncedTerm]);
+
+  const onInputChange = (e) => {
+    setTerm(e.target.value);
+
+    if (term === "") {
+      setResults([]);
+    }
+  };
 
   const renderedResults = results.map((result) => {
     return (
       <li
-        id={result.pageId}
-        key={result.pageId}
-        className="list-group-item d-flex justify-content-between align-items-start py-4  "
+        id={result.pageid}
+        key={result.pageid}
+        className="list-group-item d-flex justify-content-between align-items-start py-4"
       >
         <div className="list-group-item__text-wrapper mr-3">
           <h3
-            className="title text-primary mb-2"
+            className="title text-secondary mb-2"
             dangerouslySetInnerHTML={{ __html: result.title }}
           />
           <p
@@ -78,14 +92,17 @@ const Wiki = () => {
                     className="form-control"
                     id="search-input"
                     autoComplete="off"
-                    onChange={(e) => setTerm(e.target.value)}
+                    value={term}
+                    onChange={onInputChange}
                   />
                 </div>
               </div>
             </div>
           </div>
           <div className="col-xs-12">
-            <ul className="list-group mt-4">{term ? renderedResults : null}</ul>
+            <ul className="list-group mt-4">
+              {debouncedTerm ? renderedResults : null}
+            </ul>
           </div>
         </div>
       </div>
