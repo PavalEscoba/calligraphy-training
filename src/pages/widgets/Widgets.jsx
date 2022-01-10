@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Accordion from "./components/Accordion";
 import Wiki from "./components/Wiki";
+import Dropdown from "./components/Dropdown";
 
 const items = [
   {
@@ -20,20 +21,22 @@ const items = [
 
 const options = [
   {
-    label: "The Color Red",
+    label: "The Color Red The Color Red",
     value: "red",
   },
   {
-    label: "The Color Green",
+    label: "The Color Green The Color Green",
     value: "green",
   },
   {
-    label: "A Shade of Blue",
+    label: "A Shade of Blue A Shade of Blue",
     value: "blue",
   },
 ];
 
 const Widgets = () => {
+  const [selected, setSelected] = useState(options[0]);
+
   return (
     <div className="widgets">
       <div className="row">
@@ -46,7 +49,12 @@ const Widgets = () => {
       </div>
       <div className="row">
         {/* <Accordion items={items} /> */}
-        <Wiki />
+        {/* <Wiki /> */}
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={options}
+        />
       </div>
     </div>
   );
