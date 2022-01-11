@@ -4,7 +4,13 @@
   font-family: "Open Sans", sans-serif;
 }
 
-p, ul {
+html,
+body {
+  height: 100%;
+}
+
+p,
+ul {
   padding: 0;
   margin: 0;
 }
@@ -26,7 +32,6 @@ p, ul {
   font-size: 18px;
   line-height: 1.41;
 }
-
 
 @import "header";
 @import "back-btn";

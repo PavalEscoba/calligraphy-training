@@ -3,40 +3,39 @@ import React, { useState } from "react";
 import Accordion from "./components/Accordion";
 import Wiki from "./components/Wiki";
 import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
 
-const items = [
-  {
-    title: "What is React?",
-    content: "React is a front end javascript framework",
-  },
-  {
-    title: "Why use React?",
-    content: "React is a favorite JS library among engineers",
-  },
-  {
-    title: "How do you use React?",
-    content: "You use React by creating components",
-  },
-];
+// const items = [
+//   {
+//     title: "What is React?",
+//     content: "React is a front end javascript framework",
+//   },
+//   {
+//     title: "Why use React?",
+//     content: "React is a favorite JS library among engineers",
+//   },
+//   {
+//     title: "How do you use React?",
+//     content: "You use React by creating components",
+//   },
+// ];
 
-const options = [
-  {
-    label: "The Color Red The Color Red",
-    value: "red",
-  },
-  {
-    label: "The Color Green The Color Green",
-    value: "green",
-  },
-  {
-    label: "A Shade of Blue A Shade of Blue",
-    value: "blue",
-  },
-];
+// const options = [
+//   {
+//     label: "The Color Red The Color Red",
+//     value: "red",
+//   },
+//   {
+//     label: "The Color Green The Color Green",
+//     value: "green",
+//   },
+//   {
+//     label: "A Shade of Blue A Shade of Blue",
+//     value: "blue",
+//   },
+// ];
 
 const Widgets = () => {
-  const [selected, setSelected] = useState(options[0]);
-
   return (
     <div className="widgets">
       <div className="row">
@@ -50,11 +49,12 @@ const Widgets = () => {
       <div className="row">
         {/* <Accordion items={items} /> */}
         {/* <Wiki /> */}
-        <Dropdown
+        {/* <Dropdown
           selected={selected}
           onSelectedChange={setSelected}
           options={options}
-        />
+        /> */}
+        <Translate />
       </div>
     </div>
   );
