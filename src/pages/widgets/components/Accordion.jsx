@@ -11,7 +11,7 @@ const Accordion = ({ items }) => {
     const active = index === activeIndex ? "active" : "";
 
     return (
-      <div key={item.text} className={`card ${active}`}>
+      <div key={item.title} className={`card ${active}`}>
         <div
           className="card-header"
           onClick={() => {

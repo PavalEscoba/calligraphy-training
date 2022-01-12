@@ -47,13 +47,13 @@ console.log(ref.current);
           <label>Select a color</label>
           <div className="dropdown" ref={ref}>
             <button
-              className="btn btn-secondary dropdown-toggle"
+              className="btn btn-primary"
               type="button"
               onClick={() => {
                 setOpen(!open);
               }}
             >
-              selected: {selected.label}
+              {selected.label}
             </button>
             <div className={`dropdown-menu ${open ? "show" : ""}`}>
               {renderedItems}

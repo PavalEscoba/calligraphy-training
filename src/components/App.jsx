@@ -27,6 +27,9 @@ const App = () => {
                 <Route path="/pics" element={<Pics />} />
                 <Route path="/youtube-class" element={<YoutubeClass />} />
                 <Route path="/widgets" element={<Widgets />} />
+                <Route path="/widgets/wiki" element={<Widgets />} />
+                <Route path="/widgets/dropdown" element={<Widgets />} />
+                <Route path="/widgets/translate" element={<Widgets />} />
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/songs" element={<Songs />} />
                 <Route path="/calligraphy" element={<Calligraphy />} />

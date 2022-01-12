@@ -43,7 +43,7 @@ const DropdownInput = ({ options, selected, onSelectedChange, label }) => {
         <label>{label}</label>
         <div className="dropdown" ref={ref}>
           <button
-            className="btn btn-secondary dropdown-toggle"
+            className="btn btn-info dropdown-toggle"
             type="button"
             onClick={() => {
               setOpen(!open);

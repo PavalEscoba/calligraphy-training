@@ -1,5 +1,11 @@
+.widgets {
+  // HEADER 
+.navbar {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--gray);
+  padding-left: 0;
+}
 // ACCORDION
-
 .card {
   + .card {
     border-top: none;
@@ -45,4 +51,6 @@
 .dropdown .dropdown-toggle {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
 }

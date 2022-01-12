@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Wiki = () => {
-  const [term, setTerm] = useState("book");
+  const [term, setTerm] = useState("");
   const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [results, setResults] = useState([]);
 
@@ -99,7 +99,7 @@ const Wiki = () => {
               </div>
             </div>
           </div>
-          <div className="col-xs-12">
+          <div className="col-12">
             <ul className="list-group mt-4">
               {debouncedTerm ? renderedResults : null}
             </ul>
