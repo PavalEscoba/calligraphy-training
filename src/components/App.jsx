@@ -7,6 +7,7 @@ import Season from "../pages/season/Season";
 import Pics from "../pages/pics/Pics";
 import YoutubeClass from "../pages/youtube-class/YoutubeClass";
 import Widgets from "../pages/widgets/Widgets";
+import YoutubeHooks from "../pages/youtube-hooks/YoutubeHooks";
 import Counter from "../pages/counter/Counter";
 import Songs from "../pages/songs/Songs";
 import Calligraphy from "../pages/calligraphy/Calligraphy";
@@ -30,6 +31,7 @@ const App = () => {
                 <Route path="/widgets/wiki" element={<Widgets />} />
                 <Route path="/widgets/dropdown" element={<Widgets />} />
                 <Route path="/widgets/translate" element={<Widgets />} />
+                <Route path="/youtube-hooks" element={<YoutubeHooks />} />
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/songs" element={<Songs />} />
                 <Route path="/calligraphy" element={<Calligraphy />} />
