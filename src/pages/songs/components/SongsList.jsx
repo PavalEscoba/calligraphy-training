@@ -1,32 +1,29 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import {selectSong} from '../actions/index';
+import { selectSong } from "../actions/index";
 
 class SongList extends React.Component {
   render() {
-    console.log(this.props);
-    const renderedListItems = this.props.songs.map(
-      song => {
-        return ( <li
+    const renderedListItems = this.props.songs.map((song) => {
+      return (
+        <li
           className="list-group-item list-group-item-action"
           key={song.title}
-          onClick={()=> this.props.selectSong(song)}
+          onClick={() => this.props.selectSong(song)}
         >
           <span className="song__title">{song.author}</span> -{" "}
           <span>{song.title}</span>
-        </li>)
-      }
-    )
+        </li>
+      );
+    });
     return <ul className="list-group">{renderedListItems}</ul>;
-  };
+  }
 }
-
 
 const mapStateToProps = (state) => {
-  console.log(state);
-  return {songs: state.songs}
-}
+  return { songs: state.songs };
+};
 export default connect(mapStateToProps, {
-  selectSong
+  selectSong,
 })(SongList);

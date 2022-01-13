@@ -10,8 +10,8 @@ export const songsList = () => {
 export const selectSongReducer = (selectedSong = null, action) => {
   switch (action.type) {
     case "SONG_SELECTED":
-      return action.payload  
+      return action.payload;
     default:
-      return selectedSong
+      return selectedSong;
   }
-}
+};
