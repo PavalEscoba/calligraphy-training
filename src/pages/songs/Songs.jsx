@@ -1,28 +1,19 @@
-import React from "react";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
+import React from 'react';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
 
-import reducers from "./reducer";
-import SongsList from "./components/SongList.jsx";
-import SongDetails from "./components/SongDetails.jsx";
+import {songsList, selectSongReducer} from './reducers'
+import SongList from './components/SongsList'
 
 const Songs = () => {
+  const reducers = combineReducers({songs: songsList, selectedSong: selectSongReducer})
   return (
     <Provider store={createStore(reducers)}>
-      <div className="song">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <h1 className="section-title">Songs</h1>
-              <p className="subtitle">Click on a song to see details.</p>
-            </div>
-            <div className="col-5">{<SongsList />}</div>
-            <div className="col-7">{<SongDetails />}</div>
-          </div>
-        </div>
-      </div>
+      <p>Songs</p>
+      <SongList />
     </Provider>
-  );
+  )
 };
 
 export default Songs;
+
