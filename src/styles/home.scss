@@ -11,7 +11,7 @@
     transform: translateY(70%);
     padding: 8px;
   }
-  
+
   &__title {
     font-size: 1rem;
     margin-bottom: 0;
@@ -24,8 +24,9 @@
       width: 8px;
       height: 100%;
       display: block;
-      background-color: #fff;
       position: absolute;
+      top: 0;
+      background-color: #fff;
     }
 
     &::before {
@@ -36,7 +37,7 @@
       left: 100%;
     }
   }
-  
+
   &__text {
     font-size: 1rem;
   }
@@ -45,7 +46,6 @@
     margin-top: 56px;
   }
 }
-
 
 .link {
   display: block;

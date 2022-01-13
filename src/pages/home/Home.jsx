@@ -50,13 +50,25 @@ const Home = () => {
       <div className="links-block">
         <div className="links-block__text-wrapper text-success">
           <h3 className="title links-block__title">React + Redux </h3>
-          <p className="links-block__text">(sections 1-11)</p>
+          <p className="links-block__text">(sections 16-17)</p>
         </div>
         <Link to="/counter" className="link text-secondary">
           Counter
         </Link>
         <Link to="/songs" className="link text-secondary">
           Songs
+        </Link>
+      </div>
+
+      <div className="links-block">
+        <div className="links-block__text-wrapper text-success">
+          <h3 className="title links-block__title">
+            Async actions (Redux Thunk)
+          </h3>
+          <p className="links-block__text">(section 18)</p>
+        </div>
+        <Link to="/blog" className="link text-secondary">
+          Blog posts
         </Link>
       </div>
 
