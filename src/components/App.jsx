@@ -16,6 +16,7 @@ import Calligraphy from "../pages/calligraphy/Calligraphy";
 import "../styles/main.scss";
 
 const App = () => {
+
   return (
     <>
       <BrowserRouter>

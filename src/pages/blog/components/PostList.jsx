@@ -13,12 +13,12 @@ class PostList extends React.Component {
       return (
         <div key={post.id} className="list-group-item post">
           <div className="post__header">
-            <UserHeader userId={post.userId} />
             <h3 className="post__title">{post.title}</h3>
           </div>
           <div className="post__main">
             <p className="post__text">{post.body}</p>
           </div>
+          <UserHeader userId={post.userId} />
         </div>
       );
     });
