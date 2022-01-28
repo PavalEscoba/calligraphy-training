@@ -74,6 +74,18 @@ const Home = () => {
 
       <div className="links-block">
         <div className="links-block__text-wrapper text-success">
+          <h3 className="title links-block__title">
+            Internationalization using React Context
+          </h3>
+          <p className="links-block__text">(section 18)</p>
+        </div>
+        <Link to="/context" className="link text-secondary">
+          Context 
+        </Link>
+      </div>
+
+      <div className="links-block">
+        <div className="links-block__text-wrapper text-success">
           <h3 className="title links-block__title">Pet project</h3>
           <p className="links-block__text">
             calligraphy training sheets generator

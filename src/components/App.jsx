@@ -11,6 +11,7 @@ import YoutubeHooks from "../pages/youtube-hooks/YoutubeHooks";
 import Counter from "../pages/counter/Counter";
 import Songs from "../pages/songs/Songs";
 import Blog from "../pages/blog/Blog";
+import Context from "../pages/context/Context";
 import Calligraphy from "../pages/calligraphy/Calligraphy";
 
 import "../styles/main.scss";
@@ -37,6 +38,7 @@ const App = () => {
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/songs" element={<Songs />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/context" element={<Context />} />
                 <Route path="/calligraphy" element={<Calligraphy />} />
               </Routes>
             </div>
